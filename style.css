@@ -67,7 +67,7 @@
         function forgiveMe() {
             document.getElementById("message").innerHTML = `
                 <p class="love-message">JFEHSKFJDAS I LOVE YOU!!! 💖💖💖</p>
-                <img src="https://i.pinimg.com/originals/56/09/7c/56097c0dc2b70fd2c6bfb7c670d71f5a.gif" alt="Cute Hug GIF" class="gif">
+                <img src="https://i.pinimg.com/originals/73/0d/75/730d75ed729397068c7a89fa7476e305.gif" alt="Cute Hug GIF" class="gif">
             `;
             document.querySelector(".buttons").style.display = "none";
         }
@@ -88,4 +88,3 @@
     </script>
 </body>
 </html>
-
