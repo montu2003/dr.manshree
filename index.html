@@ -3,43 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>I'm Sorry, My Love 💖</title>
+    <title>Apology Message</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="container">
-        <h1>I'm sorry for what I did, my love</h1>
-        <p>I feel bad for what I did, and I just want you to know that I love you so much. </p>
-        <p>Please, will you forgive me? 😔💔</p>
+        <p id="main-text">I'm sorry for what I did my love</p>
+        <p id="sub-text">I feel bad for what I did, and I just want you to know that I love you so much.</p>
+        <p id="question">Please, will you forgive me? 😔💔</p>
         <div class="buttons">
-            <button id="yes-btn" onclick="forgiveMe()">Yes</button>
-            <button id="no-btn" onmouseover="moveNo()">No</button>
+            <button id="yes-button">Yes</button>
+            <button id="no-button">No</button>
         </div>
-        <div id="message"></div>
     </div>
-
-    <script>
-        function forgiveMe() {
-            document.getElementById("message").innerHTML = `
-                <p class="love-message">JFEHSKFJDAS I LOVE YOU!!! 💖💖💖</p>
-                <img src="https://i.pinimg.com/originals/56/09/7c/56097c0dc2b70fd2c6bfb7c670d71f5a.gif" alt="Cute Hug GIF" class="gif">
-            `;
-            document.querySelector(".buttons").style.display = "none";
-        }
-        
-        function moveNo() {
-            let noBtn = document.getElementById("no-btn");
-            let x = Math.random() * (window.innerWidth - 100);
-            let y = Math.random() * (window.innerHeight - 50);
-            noBtn.style.position = "absolute";
-            noBtn.style.left = `${x}px`;
-            noBtn.style.top = `${y}px`;
-            
-            let yesBtn = document.getElementById("yes-btn");
-            let currentSize = parseInt(window.getComputedStyle(yesBtn).fontSize);
-            yesBtn.style.fontSize = `${currentSize + 5}px`;
-            yesBtn.style.padding = `${currentSize / 2 + 5}px ${currentSize + 10}px`;
-        }
-    </script>
+    <img src="huggif.gif" id="hug-gif" alt="Hug GIF" style="display: none;">
+    
+    <script src="script.js"></script>
 </body>
 </html>
+
