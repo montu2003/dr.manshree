@@ -1,108 +1,115 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sorry Shona 😔</title>
-    <style>
-        body {
-            text-align: center;
-            font-family: Arial, sans-serif;
-            background-color: #ffdde1;
-            color: white;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            flex-direction: column;
-        }
-        .container {
-            background: rgba(255, 105, 180, 0.8);
-            padding: 30px;
-            border-radius: 15px;
-            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
-        }
-        h1, p {
-            margin: 10px 0;
-        }
-        .buttons {
-            margin-top: 20px;
-        }
-        button {
-            border: none;
-            padding: 15px 30px;
-            font-size: 20px;
-            cursor: pointer;
-            border-radius: 10px;
-            margin: 10px;
-            transition: all 0.3s ease;
-        }
-        #yes-btn {
-            background-color: #ff69b4;
-            color: white;
-        }
-        #yes-btn:hover {
-            background-color: #ff1493;
-        }
-        #no-btn {
-            background-color: #ff4d6d;
-            color: white;
-            position: relative;
-        }
-        .love-message {
-            font-size: 24px;
-            font-weight: bold;
-            margin-top: 20px;
-        }
-        .gif {
-            width: 250px;
-            margin-top: 20px;
-            border-radius: 10px;
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sorry Shona 😔</title>
+  <style>
+    body {
+      text-align: center;
+      font-family: Arial, sans-serif;
+      background-color: #ffdde1;
+      color: white;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      flex-direction: column;
+    }
+    .container {
+      background: rgba(255, 105, 180, 0.8);
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    }
+    h1, p {
+      margin: 10px 0;
+    }
+    .buttons {
+      margin-top: 20px;
+    }
+    button {
+      border: none;
+      padding: 15px 30px;
+      font-size: 20px;
+      cursor: pointer;
+      border-radius: 10px;
+      margin: 10px;
+      transition: all 0.3s ease;
+    }
+    #yes-btn {
+      background-color: #ff69b4;
+      color: white;
+    }
+    #yes-btn:hover {
+      background-color: #ff1493;
+    }
+    #no-btn {
+      background-color: #ff4d6d;
+      color: white;
+      position: relative;
+    }
+    .love-message {
+      font-size: 24px;
+      font-weight: bold;
+      margin-top: 20px;
+    }
+    .gif {
+      width: 250px;
+      margin-top: 20px;
+      border-radius: 10px;
+    }
+  </style>
 </head>
 <body>
-    <div class="container">
-        <h1>Hello Dr.Manshree I'm sorry for what I did Kabhi kabhi muh se kuch zyada nikal jaata hai…</h1>
-        <p>Aur fir samajh aata hai ki ‘babe’ nahi, respect chahiye thi… Sorry shona… I mean... Sorry. </p>
-        <p>
-            Please, will you forgive me?<br>
-            Agar maaf kar diya ho to <strong>Yes</strong> dabao, <br>
-            warna <strong>No</strong> dabao... (agar pakad pao to 😉)
-          </p>
-        <div class="buttons">
-            <button id="yes-btn" onclick="forgiveMe()">Yes</button>
-            <button id="no-btn" onmouseover="moveNo()">No</button>
-        </div>
-        <div id="message"></div>
+  <div class="container">
+    <h1>Hello Dr.Manshree I'm sorry for what I did Kabhi kabhi muh se kuch zyada nikal jaata hai…</h1>
+    <p>Aur fir samajh aata hai ki ‘babe’ nahi, respect chahiye thi… Sorry shona… I mean... Sorry. </p>
+    <p>
+      Please, will you forgive me?<br>
+      Agar maaf kar diya ho to <strong>Yes</strong> dabao, <br>
+      warna <strong>No</strong> dabao... (agar pakad pao to 😉)
+    </p>
+    <div class="buttons">
+      <button id="yes-btn" onclick="forgiveMe()">Yes</button>
+      <button id="no-btn">No</button>
     </div>
+    <div id="message"></div>
+  </div>
 
-    <script>
-        function forgiveMe() {
-            document.getElementById("message").innerHTML = `
-                <p class="love-message">Mujhe pata tha aap maaf kar dogi… Kyunki aapka gussa bhi itna pyaara hai ki main fir se gussa dila doon 😜❤️</p>
-                <img src="https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExcjhhMXdnZ2JtNXp6NG95MG1reGFkZzljZ2lxMTNpNzg5bjdsNWJnMCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/f3qJsJ6C3F1X51OwsQ/giphy.gif" alt="Cute Hug GIF" class="gif">
-            `;
-            document.querySelector(".buttons").style.display = "none";
-        }
-        
-        function moveNo() {
-            let noBtn = document.getElementById("no-btn");
-            let x = Math.random() * (window.innerWidth - 100);
-            let y = Math.random() * (window.innerHeight - 50);
-            noBtn.style.position = "absolute";
-            noBtn.style.left = `${x}px`;
-            noBtn.style.top = `${y}px`;
-            
-            let yesBtn = document.getElementById("yes-btn");
-            let currentSize = parseInt(window.getComputedStyle(yesBtn).fontSize);
-            yesBtn.style.fontSize = `${currentSize + 5}px`;
-            yesBtn.style.padding = `${currentSize / 2 + 5}px ${currentSize + 10}px`;
-        }
-    </script>
+  <script>
+    function forgiveMe() {
+      document.getElementById("message").innerHTML = `
+        <p class="love-message">Mujhe pata tha aap maaf kar dogi… Kyunki aapka gussa bhi itna pyaara hai ki main fir se gussa dila doon 😜❤️</p>
+        <img src="https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExcjhhMXdnZ2JtNXp6NG95MG1reGFkZzljZ2lxMTNpNzg5bjdsNWJnMCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/f3qJsJ6C3F1X51OwsQ/giphy.gif" alt="Cute Hug GIF" class="gif">
+      `;
+      document.querySelector(".buttons").style.display = "none";
+    }
+
+    function moveNo() {
+      let noBtn = document.getElementById("no-btn");
+      let x = Math.random() * (window.innerWidth - 100);
+      let y = Math.random() * (window.innerHeight - 50);
+      noBtn.style.position = "absolute";
+      noBtn.style.left = `${x}px`;
+      noBtn.style.top = `${y}px`;
+
+      let yesBtn = document.getElementById("yes-btn");
+      let currentSize = parseInt(window.getComputedStyle(yesBtn).fontSize);
+      yesBtn.style.fontSize = `${currentSize + 5}px`;
+      yesBtn.style.padding = `${currentSize / 2 + 5}px ${currentSize + 10}px`;
+    }
+
+    // Event for PC (mouse hover)
+    document.getElementById("no-btn").addEventListener("mouseover", moveNo);
+
+    // Event for mobile (touch tap)
+    document.getElementById("no-btn").addEventListener("touchstart", function(e) {
+      e.preventDefault();
+      moveNo();
+    });
+  </script>
 </body>
 </html>
-
-
